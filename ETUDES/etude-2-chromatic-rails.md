@@ -8,48 +8,49 @@ Written to the `guitar-etude` fingering rule: while a chord lasts, consecutive n
 
 ## The idea
 
-Rhythmic and chromatic. Eleven bars (1, 2, 3, 6, 7, 8, 9, 12, 13, 15, 16) open with an eighth-note rest, and several bars have rests inside them, which gives the line the bounce of Django-style playing. Approach notes (a semitone from a chord tone, played just before it) are the only notes outside the chords: G# to A in bar 1, Bb to B and Eb to D in bar 3, Bb to B in bar 4, G to G# in bar 5, B to C in bars 7 and 12, C# to D in bars 9, 10 and 14, F# to F in bar 9, Eb to E in bar 11, E to F in bar 13 and G to G# in bar 16. Bar 6 is a G#dim7 arpeggio (G# B D F) over E7b9, the classic dominant sound in this tune.
+Rhythmic and chromatic. Eleven bars (1, 2, 3, 6, 7, 8, 9, 12, 13, 15, 16) open with an eighth-note rest, and several bars have rests inside them or at the end, which gives the line the bounce of Django-style playing. Notes outside the chords are only **chromatic approach notes** (a semitone from the chord tone that follows) and **enclosures** (one note a semitone above the target, one below, then the target). Enclosures: Bb and Ab around A in bars 1 and 7, Eb and C# around D in bar 13, and A and G around the G# in bar 16. Approach notes: E to F in bars 3 and 4, Bb to A in bar 3, Eb to E in bar 5, Ab to A and C# to C in bar 9, C# to D in bar 10, F# to G in bar 11, B to C in bar 12 and Bb to B in bar 14. Bars 2, 8 and 15 repeat a note on the offbeat (a **double note**). Bar 6 is a G#dim7 arpeggio (G# B D F) over E7b9, the classic dominant sound in this tune. The last bar rests on the final eighth after the G#.
 
 ## Tab
 
 ```
   Am6 1                    Am6 2                    Dm6 3                    Dm6 4
-e|------------0-----------|------------------------|------------------------|1-----------------------|
-B|---------1-----1--------|---------------5--------|---------3--6--4--3--0--|---3--------------------|
-G|---1--2-----------2-----|------------5-----5-----|---3--4-----------------|---------3--4--2-----4--|
-D|---------------------4--|---4--7-----------------|------------------------|------------------------|
+e|------------------------|------------------------|---------5--7--6--5-----|7--5--------------------|
+B|---------------5--------|---------------5--7--5--|---5--6--------------6--|---------5--6--------6--|
+G|------------5-----5-----|------5--5--------------|------------------------|---------------7--------|
+D|---8--6--7-----------7--|---7--------------------|------------------------|------------------------|
 A|------------------------|------------------------|------------------------|------------------------|
 E|------------------------|------------------------|------------------------|------------------------|
 
   E7 5                     E7b9 6                   Am6 7                    Am6 8
-e|------------3--4--------|------------4-----------|------------------------|------------------------|
-B|---3--5-----------5--3--|---------6-----6--------|---------5--7--5--------|------------5--7--5-----|
-G|4-----------------------|---4--7-----------7--4--|---4--5-----------5-----|------5-----------------|
-D|------------------------|------------------------|---------------------7--|---7--------------------|
+e|------------------------|------------4-----------|---------------0--------|---------------0--2--0--|
+B|------3-----4--5--3-----|---------6-----6--------|------------1-----1-----|------1--1--------------|
+G|---4-----------------4--|---4--7-----------7--4--|---3--1--2-----------2--|---2--------------------|
+D|6-----------------------|------------------------|------------------------|------------------------|
 A|------------------------|------------------------|------------------------|------------------------|
 E|------------------------|------------------------|------------------------|------------------------|
 
   Dm7 9                    G13b9 10                 Cmaj7 11                 Fmaj7 12
-e|------------5-----------|------------------------|------------------------|------------------------|
-B|---------6-----7--6-----|8--6--------------------|------------4--5--------|---------5--6--6--5-----|
-G|---6--7--------------7--|---------6--7--------7--|---4--5-----------5--4--|---4--5--------------5--|
-D|------------------------|---------------9--------|5-----------------------|------------------------|
+e|------------------------|3--1--------------------|------------2--3--------|------------------------|
+B|---------1--3--2--1-----|---------2--3--------3--|------5-----------5-----|---------5--6--6--5-----|
+G|---1--2--------------2--|---------------4--------|4--5-----------------5--|---4--5--------------5--|
+D|------------------------|------------------------|------------------------|------------------------|
 A|------------------------|------------------------|------------------------|------------------------|
 E|------------------------|------------------------|------------------------|------------------------|
 
   Bb7 13                   E7 14                    Am6 15                   E7 16
-e|---------4--6--4--------|4-----------------------|---------------0--------|------------------------|
-B|---5--6-----------6--3--|---5-----2--3--------3--|------------1-----1-----|---------0--3--0--------|
-G|------------------------|---------------4--------|------2-----------------|---0--1-----------1-----|
-D|------------------------|------------------------|---4--------------------|---------------------2--|
+e|---------------4--------|------------------------|------------------0-----|------------------------|
+B|---4--------6-----6-----|5--3--------------------|---------------1-----1--|---------0--------------|
+G|------6--7-----------7--|---------3--4--------4--|------2--2--------------|------1-----2--0--1-----|
+D|------------------------|---------------6--------|---4--------------------|---2--------------------|
 A|------------------------|------------------------|------------------------|------------------------|
 E|------------------------|------------------------|------------------------|------------------------|
 ```
 
 ## Practice notes
 
-- The approach note should lean into the target: play it lightly and put the weight on the chord tone it leads to.
+- The approach and enclosing notes should lean into the target: play them lightly and put the weight on the chord tone they lead to.
 - Accent the beats with chord tones.
+- Play bars 1, 7 and 13 until the enclosure is automatic: two notes either side of the target, then the arpeggio.
 - Try bar 6 alone on every dim7 inversion (shift it three frets) to see how all four notes are equivalent.
 
-Every pitch in the tab was checked against the chord in its bar by script (`.agents/skills/guitar-etude/scripts/check_etude.py`), and so was the fingering rule: inside a chord the biggest jump between notes is 3 frets, at a chord change it is 2 frets, and no bar needs more than a four-fret window. The etude has not been played on an instrument; fingerings are one way to play it, not the only way. Approach notes were checked as being one semitone from the chord tone that follows them. The frets run from 0 to 9.
+Every pitch in the tab was checked against the chord in its bar by script (`.agents/skills/guitar-etude/scripts/check_etude.py`), and so was the fingering rule: inside a chord the biggest jump between notes is 3 frets, at a chord change it is 2 frets, and no bar needs more than a four-fret window. The etude has not been played on an instrument; fingerings are one way to play it, not the only way. Approach notes and enclosures were checked as sitting one semitone from the chord tone that follows them. The frets run from 0 to 9.

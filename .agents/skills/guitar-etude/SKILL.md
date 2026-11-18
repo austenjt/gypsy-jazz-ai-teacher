@@ -1,7 +1,7 @@
 ---
 name: guitar-etude
 display-name: Guitar Etude
-description: Compose playable guitar etudes over chord changes, keeping consecutive notes close together on the neck (at most 3 chromatic degrees, or frets, apart within a chord; 5-6 only across a chord change) so the fingering stays easy and efficient.
+description: Compose playable guitar etudes over chord changes, keeping consecutive notes close together on the neck (at most 3 chromatic degrees, or frets, apart within a chord; 5-6 only across a chord change) so the fingering stays easy and efficient, and shaped with gypsy jazz devices (enclosures, chromatics, voice leading, pauses, double stops).
 ---
 
 # Guitar Etude
@@ -46,6 +46,23 @@ If a phrase breaks the rule, rewrite it: change the string, change the octave, c
 5. **Write the line.** Fill each bar inside its position, keeping consecutive notes within the limits above.
 6. **Check it.** Run the playability checks below. Fix before showing.
 7. **Present it.** Name line, chord symbols with bar numbers above each bar, the tab, a degree line where useful, and a short note on the tricky spot.
+
+## Style (gypsy jazz)
+
+The rules above make an etude playable. This section makes it sound like the style. Use a few devices per phrase, not all of them in every bar, and name the device in the practice notes so the student knows what to listen for. Every device still has to obey the proximity rule and the chord check.
+
+- **Swing feel.** Swung eighth notes, with the accent on the offbeats. Start phrases on the "&" of 1 (an eighth rest first) as often as on the beat. Land on chord tones on beats 1 and 3, and let the offbeats carry the decoration.
+- **Arpeggios as the backbone.** Minor 6th over the minor tonic, the dim7 built on the 3rd over a dominant (see `music-theory-arpeggios`). Plain sweeps are the base; the devices below dress them.
+- **Chromatics.** A chromatic approach is one semitone below or above a chord tone, played just before it on a weak beat. A short chromatic run of three or four notes should end on a chord tone on a strong beat. Approach notes are the only notes allowed outside the chord, and each must be followed by its target.
+- **Enclosures.** Surround the target: one note a semitone (or scale step) above, one a semitone below, then the target, in either order. For target A that is `Bb G# A` or `G# Bb A`. Land the target on the beat, so the two enclosing notes fall on the weak beat just before it. All three notes still sit within 3 frets of each other.
+- **Voice leading.** Join chords by the smallest move: the last note of one bar steps to the nearest chord tone of the next. The classic moves are the 7th of a dominant falling to the 3rd of the tonic (D of E7 down to C of Am6) and the leading tone rising to the root (G# to A). Plan the chord-change landing before writing the bar.
+- **Pauses.** Rests are part of the line. Leave an eighth or quarter rest before a chord change, or after a long run, so the hand can move and the phrase can breathe. A bar that is full from beat 1 to the last eighth is a warning sign.
+- **Double stops.** Two notes struck together on adjacent strings: thirds, sixths and octaves, used as accents on a strong beat or at the end of a phrase. Both notes must be tones of the chord. The pair counts as one position for the proximity rule, so measure the distance from the lower note. In tab the two frets are stacked in the same slot. The checker script does not read stacked notes yet, so say in the etude that double stops were checked by hand.
+- **Double notes.** The same pitch played twice in a row, as a repeated eighth note, to give the line a rhythmic push. Repeats cost nothing under the distance rule (0 frets). Use them on the offbeat, not on every beat.
+- **Slides and hammer-ons.** The usual ornaments: a slide into a chord tone (`/`), a hammer-on or pull-off on a weak beat (`h`, `p`), a fast grace note. Use the symbols from `guitar-tablature` and give the legend once.
+- **Bends.** Rare in gypsy jazz and best kept small: a half-step bend into a chord tone, once or twice per etude. The note counts at its target pitch for every check.
+
+Keep the style in proportion. A good etude has one clear idea (see "Process") and two or three of these devices that serve it.
 
 ## Playability checks
 

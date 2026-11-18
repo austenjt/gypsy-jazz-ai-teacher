@@ -8,29 +8,29 @@ Written to the `guitar-etude` fingering rule: while a chord lasts, consecutive n
 
 ## The idea
 
-Pure arpeggio sweeps. Each chord's tones are a ladder, and the bars walk up and down it. The two-bar chords (bars 1-2, 3-4, 7-8) are pairs: the first bar climbs six chord tones and steps back, the second falls past the root and returns. The single-bar chords alternate an arch (up, then back down) and a valley (down, then back up). The register rises through the form, from the nut end of the neck in bar 1 to the 7th-10th frets in bar 11, then settles back toward the nut by bar 16. Bars 6 and 10 use a five-tone ladder, so the b9 (F over E7b9, Ab over G13b9) is part of the sweep. The final bar runs down the E7 arpeggio and back to land on G#, which pulls to A at the top of the form.
+Arpeggio sweeps, joined by voice leading. Each chord's tones are a ladder, and the bars walk up and down it. The two-bar chords (bars 1-2, 3-4, 7-8) are pairs: the first bar climbs six chord tones and steps back, the second falls past the root and returns. The single-bar chords alternate an arch (up, then back down) and a valley (down, then back up). The register rises through the form, from the nut end of the neck in bar 1 to the 7th-10th frets in bar 11, then settles back toward the nut by bar 16, and the hand moves 3 frets at most at any chord change. Style devices: a **pause** (an eighth rest) closes bars 4, 8 and 12, just before the chord changes; bars 5 and 13 repeat their top note as a **double note** for a rhythmic push; bars 6 and 10 use a five-tone ladder, so the b9 (F over E7b9, Ab over G13b9) is part of the sweep. The last bar runs down the E7 arpeggio, then **encloses** the G# (A above, G below, then G#) and rests, so the G# pulls straight to the A at the top of the form.
 
 ## Tab
 
 ```
   Am6 1                    Am6 2                    Dm6 3                    Dm6 4
 e|---------------0--------|------------------------|---------------1--------|------------------------|
-B|------------1-----1-----|------------------------|------------3-----3-----|3-----------------3-----|
-G|---------2-----------2--|2-----------------2-----|------2--4-----------4--|---4--2-----2--4-----2--|
-D|---2--4-----------------|---4--2-----2--4-----2--|0--3--------------------|---------3--------------|
+B|------------1-----1-----|------------------------|------------3-----3-----|6-----------------6-----|
+G|---------2-----------2--|2-----------------2-----|------2--4-----------4--|---7-----------7--------|
+D|---2--4-----------------|---4--2-----2--4-----2--|0--3--------------------|------9--7--9-----------|
 A|3-----------------------|---------3--------------|------------------------|------------------------|
 E|------------------------|------------------------|------------------------|------------------------|
 
   E7 5                     E7b9 6                   Am6 7                    Am6 8
-e|------------4-----------|4-----------------------|---------------5--------|5-----------------5-----|
-B|------3--5-----5--3-----|---6--5--3-----3--5--6--|---------5--7-----7--5--|---7--5-----5--7-----5--|
+e|------------4--4--------|4-----------------------|---------------5--------|5-----------------5-----|
+B|------3--5--------5-----|---6--5--3-----3--5--6--|---------5--7-----7--5--|---7--5-----5--7--------|
 G|---4-----------------4--|------------4-----------|------5-----------------|---------5--------------|
 D|6-----------------------|------------------------|4--7--------------------|------------------------|
 A|------------------------|------------------------|------------------------|------------------------|
 E|------------------------|------------------------|------------------------|------------------------|
 
   Dm7 9                    G13b9 10                 Cmaj7 11                 Fmaj7 12
-e|---------5--8--5--------|7-----------------------|---------7--8--7--------|8--5-----------------5--|
+e|---------5--8--5--------|7-----------------------|---------7--8--7--------|8--5--------------------|
 B|------6-----------6-----|---9--8--6-----6--8--9--|------8-----------8-----|------6--5-----5--6-----|
 G|5--7-----------------7--|------------7-----------|---9-----------------9--|------------5-----------|
 D|------------------------|------------------------|10----------------------|------------------------|
@@ -38,10 +38,10 @@ A|------------------------|------------------------|------------------------|---
 E|------------------------|------------------------|------------------------|------------------------|
 
   Bb7 13                   E7 14                    Am6 15                   E7 16
-e|---------4--6--4--------|4-----------------------|------------0--2--0-----|------------------------|
-B|---3--6-----------6--3--|---5--3-----------3--5--|---------1-----------1--|3--0--------------------|
-G|3-----------------------|---------4-----4--------|------2-----------------|------1-----------1-----|
-D|------------------------|------------6-----------|2--4--------------------|---------2--0--2-----2--|
+e|---------4--6--6--4-----|4-----------------------|------------0--2--0-----|------------------------|
+B|---3--6--------------3--|---5--3-----------3--5--|---------1-----------1--|3--0--------------------|
+G|3-----------------------|---------4-----4--------|------2-----------------|------1-----2--0--1-----|
+D|------------------------|------------6-----------|2--4--------------------|---------2--------------|
 A|------------------------|------------------------|------------------------|------------------------|
 E|------------------------|------------------------|------------------------|------------------------|
 ```
@@ -49,7 +49,8 @@ E|------------------------|------------------------|------------------------|---
 ## Practice notes
 
 - Start with bars 1-2, slowly, with strict alternate picking: one bar climbs, the next falls.
-- Play bars 9-12 as two pairs. At each change the hand moves 4 frets at most; find the nearest chord tone of the new chord and arrive on it.
-- Loop bar 16 into bar 1: the G# at the end is the leading tone into the A that the next chorus opens on.
+- Play bars 9-12 as two pairs. At each change find the nearest chord tone of the new chord and arrive on it.
+- In bar 16, play the enclosure (A, G, G#) as three even eighths with the weight on the G#, then leave the rest empty before looping to bar 1.
+- Play the repeated top note in bars 5 and 13 with a slightly harder second pick.
 
-Every pitch in the tab was checked against the chord in its bar by script (`.agents/skills/guitar-etude/scripts/check_etude.py`), and so was the fingering rule: inside a chord the biggest jump between notes is 3 frets, at a chord change it is 4 frets, and no bar needs more than a four-fret window. The etude has not been played on an instrument; fingerings are one way to play it, not the only way. The frets run from 0 to 10.
+Every pitch in the tab was checked against the chord in its bar by script (`.agents/skills/guitar-etude/scripts/check_etude.py`), and so was the fingering rule: inside a chord the biggest jump between notes is 3 frets, at a chord change it is 3 frets, and no bar needs more than a four-fret window. The etude has not been played on an instrument; fingerings are one way to play it, not the only way. The frets run from 0 to 10.

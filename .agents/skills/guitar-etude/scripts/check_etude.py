@@ -5,8 +5,9 @@ Usage: check_etude.py ETUDE.md [...]
 
 Reads the tab block (six string lines, bars of 8 slots x 3 columns, chord label
 line above each row, e.g. "  Am6 1   Am6 2") and checks:
-  * every note is a chord tone of its bar, or an approach note one semitone from
-    the chord tone that follows it
+  * every note is a chord tone of its bar, or an approach note (one semitone from
+    the chord tone that follows) or an enclosure (two notes, one a semitone above
+    and one below the chord tone that follows)
   * within a chord (same chord symbol on consecutive bars): consecutive notes are
     at most 3 frets apart and on the same or an adjacent string
   * at a chord change: the first note is at most 6 frets from the last note
@@ -63,52 +64,59 @@ def parse(path):
 
 def main(path):
     bars = parse(path)
-    bad, offs = [], []
+    N = ['C', 'C#', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'Ab', 'A', 'Bb', 'B']
+    bad, devices = [], []
     maxin = maxch = maxspan = 0
-    prev = None
-    prev_chord = None
-    nnotes = 0
+    flat = []  # (bar number, chord name, string, fret, pitch, first note of bar?)
     for name, num, slots in bars:
-        chord = pcs(CHORDS[name])
-        notes = [(s, f) for s in slots if s for (s, f) in [s]]
-        fretted = [f for _, f in notes if f > 0]
+        fretted = [f for x in slots if x for f in [x[1]] if f > 0]
         span = max(fretted) - min(fretted) if fretted else 0
         maxspan = max(maxspan, span)
         if span > 3:
             bad.append(f'bar {num}: fret span {span} (window of {span + 1} frets)')
-        seq = [x for x in slots if x]
-        for k, (st, fr) in enumerate(seq):
-            nnotes += 1
-            p = OPEN[st] + fr
-            if p % 12 not in chord:
-                nxt = None
-                if k + 1 < len(seq):
-                    nxt = OPEN[seq[k + 1][0]] + seq[k + 1][1]
-                elif num < len(bars):
-                    s2 = next(x for x in bars[num][2] if x)
-                    nxt = OPEN[s2[0]] + s2[1]
-                N = ['C','C#','D','Eb','E','F','F#','G','Ab','A','Bb','B']
-                nm = N[p % 12]
-                if nxt is not None and abs(nxt - p) == 1 and nxt % 12 in chord:
-                    offs.append(f'bar {num}: {nm} to {N[nxt % 12]}')
-                else:
-                    bad.append(f'bar {num}: {nm} (string {st}, fret {fr}) not in {name}')
-            if prev is not None:
-                df, ds = abs(fr - prev[1]), abs(st - prev[0])
-                if k == 0 and prev_chord != name:
-                    maxch = max(maxch, df)
-                    if df > 6:
-                        bad.append(f'bar {num}: change from {prev_chord} moves {df} frets')
-                else:
-                    maxin = max(maxin, df)
-                    if df > 3 or ds > 1:
-                        bad.append(f'bar {num}: {df} frets, {ds} strings apart within {name}')
-            prev = (st, fr)
-        prev_chord = name
-    print(f'{path}: {len(bars)} bars, {nnotes} notes; max within-chord move {maxin} frets, '
-          f'max move at a chord change {maxch}, max bar span {maxspan}')
-    if offs:
-        print('  approach notes: ' + ', '.join(offs))
+        first = True
+        for x in slots:
+            if x:
+                flat.append((num, name, x[0], x[1], OPEN[x[0]] + x[1], first))
+                first = False
+    chords = {name: pcs(CHORDS[name]) for name, _, _ in bars}
+    k = 0
+    while k < len(flat):
+        num, name, st, fr, p, _ = flat[k]
+        if p % 12 not in chords[name]:
+            run = [k]
+            while run[-1] + 1 < len(flat) and flat[run[-1] + 1][4] % 12 not in chords[flat[run[-1] + 1][1]]:
+                run.append(run[-1] + 1)
+            tk = run[-1] + 1
+            ok = False
+            if tk < len(flat) and len(run) <= 2:
+                tp = flat[tk][4]
+                offs = [flat[r][4] - tp for r in run]
+                if all(abs(o) == 1 for o in offs) and (len(run) == 1 or offs[0] != offs[1]):
+                    ok = True
+                    kind = 'approach' if len(run) == 1 else 'enclosure'
+                    devices.append(f'bar {num}: {kind} ' + ' '.join(N[flat[r][4] % 12] for r in run) + f' to {N[tp % 12]}')
+            if not ok:
+                bad.append(f'bar {num}: {N[p % 12]} (string {st}, fret {fr}) not in {name} and not an approach or enclosure')
+            k = run[-1] + 1
+        else:
+            k += 1
+    for k in range(1, len(flat)):
+        a, b = flat[k - 1], flat[k]
+        df, ds = abs(a[3] - b[3]), abs(a[2] - b[2])
+        if b[5] and a[1] != b[1]:
+            maxch = max(maxch, df)
+            if df > 6:
+                bad.append(f'bar {b[0]}: change from {a[1]} moves {df} frets')
+        else:
+            maxin = max(maxin, df)
+            if df > 3 or ds > 1:
+                bad.append(f'bar {b[0]}: {df} frets, {ds} strings apart within {b[1]}')
+    reps = sum(1 for k in range(1, len(flat)) if flat[k][4] == flat[k - 1][4])
+    print(f'{path}: {len(bars)} bars, {len(flat)} notes; max within-chord move {maxin} frets, '
+          f'max move at a chord change {maxch}, max bar span {maxspan}; repeated notes {reps}')
+    if devices:
+        print('  ' + ', '.join(devices))
     for b in bad:
         print('  FAIL ' + b)
     return 1 if bad else 0

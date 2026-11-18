@@ -40,7 +40,7 @@ You can also use the skills on their own: ask for a tab of a lick, the notes in 
 | `guitar-tablature` | Writes and reads six-line ASCII tab: layout, timing and ruler lines, technique symbols, chord shapes, fingering and picking notes, playability checks |
 | `music-theory-scales` | Interval formulas and movable tab patterns for major, minor, harmonic minor, Neapolitan, major and minor blues, and diminished half-whole scales. How to name a scale from tab and label it |
 | `music-theory-arpeggios` | Minor, minor 6th, minor 7th, 6/9 and diminished 7th arpeggios as movable tab patterns, with fingerprints for identifying them. Builds on the scales skill |
-| `guitar-etude` | Composes playable etudes over chord changes. Keeps consecutive notes within 3 chromatic degrees (frets) on the same or adjacent string while a chord lasts (5-6 at most across a change), with playability checks |
+| `guitar-etude` | Composes playable etudes over chord changes. Keeps consecutive notes within 3 chromatic degrees (frets) on the same or adjacent string while a chord lasts (5-6 at most across a change), with playability checks and a gypsy jazz style guide (enclosures, chromatics, voice leading, pauses, double stops) |
 | `ireal-pro` | Finds and decodes gypsy jazz chord charts from the iReal Pro forum "Gypsy Jazz" thread and saves them as readable charts. Includes a decoder script |
 
 The skills work together. For example: a lesson plan picks a tune from `SONGS/`, an arpeggio from `GENERATED/`, writes the exercise out with `guitar-tablature`, and labels the notes with `music-theory-arpeggios`.
