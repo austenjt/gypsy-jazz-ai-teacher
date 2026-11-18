@@ -158,7 +158,7 @@ E|--5---6---8---9----------------------|
 When a passage is one of these patterns, say so. Use the same layout as `guitar-tablature`, and add two things:
 
 1. **A name line above the block**, on its own line, never inside the fret columns: root, pattern name, formula.
-2. **A degree line below the block**, under any ruler or picking line, aligned to the fret numbers: `R` for root, then `b3`, `5`, `b7`, and so on.
+2. **A degree line below the block**, under any picking line, aligned to the fret numbers: `R` for root, then `b3`, `5`, `b7`, and so on.
 
 ```
 Am7 arpeggio, up and back (1 b3 5 b7). 4/4, eighth notes, one column group per note.
@@ -169,10 +169,9 @@ D|------5-----------5-----|
 A|---7-----------------7--|
 E|5-----------------------|
   R  5  b7 b3 5  b3 b7 5
-  1  &  2  &  3  &  4  &
 ```
 
-Each note takes three columns so a two-character degree such as `b7` fits under its fret. The degree line and the ruler line start at the same column as the first fret number.
+Each note takes three columns so a two-character degree such as `b7` fits under its fret. The degree line starts at the same column as the first fret number.
 
 Rules for labels:
 

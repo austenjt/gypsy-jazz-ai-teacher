@@ -41,19 +41,9 @@ Defaults that keep it readable (adjust when the reader asks for something else):
 
 ## Timing
 
-Spacing alone is not rhythm. Pick one of these and say which:
+Spacing alone is not rhythm. Default to the declared grid and say so once; use a ruler line only on request:
 
-**Ruler line** — works for any reader, needs no explanation:
-
-```
-e|----------------|----------------|
-B|----------------|----------------|
-G|----------------|----------------|
-D|--2---4---5---4-|--2-------------|
-A|----------------|----------------|
-E|----------------|----------------|
-   1 & 2 & 3 & 4 &   1 & 2 & 3 & 4 &
-```
+**Ruler line** — only when the reader asks for one. By default do not put a `1 & 2 & 3 & 4 &` line under the tab; it is repetitive and redundant. State the grid once above the block instead.
 
 **Declared grid** — proportional spacing with an explicit resolution:
 

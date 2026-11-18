@@ -108,8 +108,9 @@ G|----------------|
 D|--2---4---5---4-|
 A|----------------|
 E|----------------|
-   1 & 2 & 3 & 4 &
 ```
+
+No beat-counting ruler (`1 & 2 & 3 & 4 &`) under the tab; it is repetitive. Rhythm is stated once above the block (tempo, time signature, grid).
 
 Chord shapes in prose are six-character fret strings, low E to high e, `x` for a muted string:
 
