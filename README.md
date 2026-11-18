@@ -40,6 +40,7 @@ You can also use the skills on their own: ask for a tab of a lick, the notes in 
 | `guitar-tablature` | Writes and reads six-line ASCII tab: layout, timing and ruler lines, technique symbols, chord shapes, fingering and picking notes, playability checks |
 | `music-theory-scales` | Interval formulas and movable tab patterns for major, minor, harmonic minor, Neapolitan, major and minor blues, and diminished half-whole scales. How to name a scale from tab and label it |
 | `music-theory-arpeggios` | Minor, minor 6th, minor 7th, 6/9 and diminished 7th arpeggios as movable tab patterns, with fingerprints for identifying them. Builds on the scales skill |
+| `guitar-etude` | Composes playable etudes over chord changes. Keeps consecutive notes within 3 chromatic degrees (frets) on the same or adjacent string while a chord lasts (5-6 at most across a change), with playability checks |
 | `ireal-pro` | Finds and decodes gypsy jazz chord charts from the iReal Pro forum "Gypsy Jazz" thread and saves them as readable charts. Includes a decoder script |
 
 The skills work together. For example: a lesson plan picks a tune from `SONGS/`, an arpeggio from `GENERATED/`, writes the exercise out with `guitar-tablature`, and labels the notes with `music-theory-arpeggios`.
@@ -68,7 +69,7 @@ Open the folder as a project in Bionic (see below), then try a prompt:
 
 ## Using it in Bionic
 
-**As a project.** Open this folder as a project in Bionic. Project skills live in `.agents/skills/`, so they load automatically for every session in that project. Type `@lesson-planning`, `@guitar-tablature`, `@music-theory-scales`, `@music-theory-arpeggios` or `@ireal-pro` to trigger a skill explicitly, or just ask and let the model pick it.
+**As a project.** Open this folder as a project in Bionic. Project skills live in `.agents/skills/`, so they load automatically for every session in that project. Type `@lesson-planning`, `@guitar-tablature`, `@music-theory-scales`, `@music-theory-arpeggios`, `@guitar-etude` or `@ireal-pro` to trigger a skill explicitly, or just ask and let the model pick it.
 
 **Anywhere else.** Copy the skill folders you want from `.agents/skills/` into another project's `.agents/skills/` folder, or install them globally from Bionic's Settings → Skills. The skills refer to each other and to the content folders, so copy `lesson-planning` together with the folders it points at if you want the full set.
 
@@ -85,6 +86,8 @@ Open the folder as a project in Bionic (see below), then try a prompt:
     SKILL.md          # scale definitions, patterns, identification, tab labelling
   music-theory-arpeggios/
     SKILL.md          # arpeggio definitions and patterns; refers to the scales skill
+  guitar-etude/
+    SKILL.md          # writing playable etudes; proximity rule for fingering
   ireal-pro/
     SKILL.md          # reading iReal Pro forum charts, format, saving charts
     scripts/
