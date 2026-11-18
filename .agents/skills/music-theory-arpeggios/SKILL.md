@@ -1,7 +1,7 @@
 ---
 name: music-theory-arpeggios
 display-name: Music Theory: Arpeggios
-description: Define and identify arpeggios (minor, minor 6th, minor 7th, 6/9, diminished 7th from the half-whole scale) and label them as patterns in guitar tablature.
+description: Define and identify arpeggios (minor, minor 6th, minor 7th, 6/9, diminished 7th from the half-whole scale), relate them to the major and minor pentatonic scales, and label them as patterns in guitar tablature.
 ---
 
 # Music Theory: Arpeggios
@@ -30,6 +30,23 @@ Each arpeggio is defined by **interval formula**, **semitone set** and **note na
 
 The diminished 7th is drawn from the half-whole scale (1 b2 b3 3 b5 5 6 b7): take every other note starting on the root, 1 b3 b5 bb7.
 
+### Pentatonic scales (for comparison)
+
+The pentatonic scales are not arpeggios, but they share most of their notes with the arpeggios above, so the two are easy to confuse. Both are five-note scales.
+
+| Scale | Formula | Semitones | Notes in A |
+| --- | --- | --- | --- |
+| Minor pentatonic | 1 b3 4 5 b7 | 0 3 5 7 10 | A C D E G |
+| Major pentatonic | 1 2 3 5 6 | 0 2 4 7 9 | A B C# E F# |
+
+How they relate to the arpeggios:
+
+- **Am and Am7 live inside A minor pentatonic.** Am (A C E) and Am7 (A C E G) use only its notes. Am6 does not: F# is not in the scale.
+- **A major pentatonic is the A6/9 arpeggio's five notes** (A B C# E F#), the same set, played as a scale run instead of as chord tones.
+- **Relative pairs share notes.** A minor pentatonic and C major pentatonic are the same five notes (A C D E G); A major pentatonic and F# minor pentatonic are the same (A B C# E F#). The root decides which name applies.
+
+Scale spelling and moving the shapes are covered in `music-theory-scales`.
+
 ### Ambiguous names
 
 These names are used for more than one thing. Defaults are in bold; say so if you use the other.
@@ -37,6 +54,7 @@ These names are used for more than one thing. Defaults are in bold; say so if yo
 | Name | Default reading | Other reading |
 | --- | --- | --- |
 | Minor | **Minor triad** (1 b3 5) | Any minor-family chord |
+| 6/9 vs. major pentatonic | **6/9 arpeggio** when played as chord tones (one note per string, sweep) | **Major pentatonic** when played as a scale run |
 | Diminished half-whole arpeggio | **Dim7 arpeggio (1 b3 b5 bb7) drawn from the half-whole scale** | The dominant b9 chord tones (1 3 5 b7 b9) of the same scale |
 | 6/9 | **Major 6/9** (1 3 5 6 9) | Minor 6/9 (1 b3 5 6 9) |
 
@@ -52,12 +70,15 @@ Use the pitch-class method in `music-theory-scales` ("Identifying a scale from t
 | 4 | 0 3 7 9 | Minor 6th arpeggio |
 | 4 | 0 3 7 10 | Minor 7th arpeggio |
 | 4 | 0 3 6 9 | Diminished 7th arpeggio |
-| 5 | 0 4 7 9 2 | 6/9 arpeggio |
+| 5 | 0 4 7 9 2 | 6/9 arpeggio (or major pentatonic, see below) |
+| 5 | 0 3 5 7 10 | Minor pentatonic scale (not an arpeggio) |
 
 ### Same notes, different names
 
 - **Minor 6th and half-diminished.** Am6 (A C E F#) is the same four notes as F#m7b5 (F# A C E). Choose by the bass note and the chord symbol.
 - **Minor 7th and major 6th.** Am7 (A C E G) is the same four notes as C6 (C E G A).
+- **6/9 and major pentatonic.** A6/9 (A C# E F# B) is the same five notes as A major pentatonic. Say which you mean: arpeggio if played as chord tones, scale if played as a run.
+- **Minor pentatonic contains Am7.** A C D E G holds A C E G. Add the D and you have the scale; leave it out and you have the arpeggio.
 - **Diminished 7th has four roots.** Adim7, Cdim7, Ebdim7 and Gbdim7 are the same four notes. The shape repeats every three frets.
 
 ## Pattern library
@@ -172,6 +193,8 @@ A rough map for choosing which arpeggio fits a chord, used when composing a line
 | Am7 | Am7 arpeggio | Straight minor 7th sound |
 | E7 or E7b9 | G#dim7 arpeggio (scales: see `music-theory-scales`) | A dim7 arpeggio built on the 3rd of a dominant b9 chord gives its upper structure |
 | A6/9 or A6 | A6/9 arpeggio | Major tonic with a closed sound |
+| Am, Am7 (simple, bluesy) | A minor pentatonic | Contains Am7; gives a plainer line than the arpeggios |
+| A6 or A6/9 (open, folk-like) | A major pentatonic | Same notes as A6/9, played as a scale |
 
 ## Playability checks
 
