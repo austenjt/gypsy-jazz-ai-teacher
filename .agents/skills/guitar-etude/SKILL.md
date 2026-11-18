@@ -45,7 +45,26 @@ If a phrase breaks the rule, rewrite it: change the string, change the octave, c
 4. **Plan the positions.** For each bar, pick the hand position and the target chord tone to arrive on. Check the change-over from bar to bar against the proximity rule.
 5. **Write the line.** Fill each bar inside its position, keeping consecutive notes within the limits above.
 6. **Check it.** Run the playability checks below. Fix before showing.
-7. **Present it.** Name line, chord symbols with bar numbers above each bar, the tab, a degree line where useful, and a short note on the tricky spot.
+7. **Present it.** Name line, chord symbols with bar numbers above each bar, the tab, a degree line under every row of tab (see "Degree line" below), and a short note on the tricky spot.
+
+## Degree line (always include it)
+
+Under every row of tab, add a **degree line**: each note is labelled by its role in that bar's chord, in a column under its fret number. It helps the student see the pattern behind the shapes. The student likes it, so never leave it out.
+
+- Labels: `R` root, `3` or `b3`, `5`, `6`, `7` or `b7`, `b9`, and so on, relative to the root of the bar's chord (not the key). Rests stay blank.
+- `a` marks a chromatic approach or enclosure note that is not in the chord.
+- A repeated note repeats its label.
+- Keep the slot grid: three columns per slot, label at the first column of the slot, a space in place of each bar line.
+- Say once, in the etude's intro, what the labels mean.
+
+```
+  Am6 1
+e|------------------------|
+B|---------------5--------|
+G|------------5-----5-----|
+D|---8--6--7-----------7--|
+     a  a  R  b3 5  b3 R
+```
 
 ## Style (gypsy jazz)
 

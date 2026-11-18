@@ -2,7 +2,7 @@
 
 Chart: *Minor Swing* (Reinhardt-Grapelli), A minor, the 16-bar A section as written in the iReal chart: Am6 Am6 Dm6 Dm6 / E7 E7 Am6 Am6 / Dm6 Dm6 Am6 Am6 / Bb7 E7 Am6 E7, here played with the chart's alternate chords in bars 9-13 (Dm7, G13b9, Cmaj7, Fmaj7) and the b9 colour on E7 in bar 6. See `SONGS/minor-swing.md`.
 
-Standard tuning `E A D G B e`. Notes are named in written guitar pitch (the sounding pitch is an octave lower). 4/4, swung eighth notes: **quarter = 160** to learn it, work up to 180-200. Each bar has eight note slots of three columns each, so two-digit frets fit. A slot with no fret is a rest. Chord symbols sit above each bar with the bar number.
+Standard tuning `E A D G B e`. Notes are named in written guitar pitch (the sounding pitch is an octave lower). 4/4, swung eighth notes: **quarter = 160** to learn it, work up to 180-200. Each bar has eight note slots of three columns each, so two-digit frets fit. A slot with no fret is a rest. Chord symbols sit above each bar with the bar number. The line under each row of tab labels every note by its role in that bar's chord: `R` root, `3` or `b3`, `5`, `6`, `7` or `b7`, `b9`, and `a` for a chromatic approach or enclosure note that is not in the chord. A repeated note repeats its label.
 
 Written to the `guitar-etude` fingering rule: while a chord lasts, consecutive notes are at most 3 frets apart and on the same or an adjacent string; at a chord change the line moves at most 6 frets; each bar fits a four-fret window.
 
@@ -20,6 +20,7 @@ G|------------5-----5-----|------5--5--------------|------------------------|---
 D|---8--6--7-----------7--|---7--------------------|------------------------|------------------------|
 A|------------------------|------------------------|------------------------|------------------------|
 E|------------------------|------------------------|------------------------|------------------------|
+     a  a  R  b3 5  b3 R      R  b3 b3    5  6  5      a  b3 5  6  a  5  b3  6  5     a  b3 R     b3
 
   E7 5                     E7b9 6                   Am6 7                    Am6 8
 e|------------------------|------------4-----------|---------------0--------|---------------0--2--0--|
@@ -28,6 +29,7 @@ G|---4-----------------4--|---4--7-----------7--4--|---3--1--2-----------2--|---
 D|6-----------------------|------------------------|------------------------|------------------------|
 A|------------------------|------------------------|------------------------|------------------------|
 E|------------------------|------------------------|------------------------|------------------------|
+  3  5  b7    a  R  b7 5      5  b7 b9 3  b9 b7 5      a  a  R  b3 5  b3 R      R  b3 b3    5  6  5
 
   Dm7 9                    G13b9 10                 Cmaj7 11                 Fmaj7 12
 e|------------------------|3--1--------------------|------------2--3--------|------------------------|
@@ -36,6 +38,7 @@ G|---1--2--------------2--|---------------4--------|4--5-----------------5--|---
 D|------------------------|------------------------|------------------------|------------------------|
 A|------------------------|------------------------|------------------------|------------------------|
 E|------------------------|------------------------|------------------------|------------------------|
+     a  5  b7 R  a  b7 5   R  b7    a  5  3     5   7  R  3     a  5  3  R      a  5  7  R  R  7  5
 
   Bb7 13                   E7 14                    Am6 15                   E7 16
 e|---------------4--------|------------------------|------------------0-----|------------------------|
@@ -44,6 +47,7 @@ G|------6--7-----------7--|---------3--4--------4--|------2--2--------------|---
 D|------------------------|---------------6--------|---4--------------------|---2--------------------|
 A|------------------------|------------------------|------------------------|------------------------|
 E|------------------------|------------------------|------------------------|------------------------|
+     a  a  3  5  b7 5  3   R  b7    a  5  3     5      6  R  R     b3 5  b3     R  3  5  a  a  3
 ```
 
 ## Practice notes
