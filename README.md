@@ -2,6 +2,8 @@
 
 A set of skills that lets an AI act as a **gypsy jazz guitar teacher**.
 
+I accept pull requests to contribute to this repository.
+
 The skills give the AI the things a good teacher has: a clear way to write music down, a firm grip on the theory, a library of tunes and exercises to work from, and a way to plan lessons and adapt them to the student. You talk to the AI; it uses these skills to explain, show you tab, pick material, and plan what to practise next.
 
 ## Goals
