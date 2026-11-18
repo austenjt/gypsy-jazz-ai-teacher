@@ -55,7 +55,7 @@ The skills work together. For example: a lesson plan picks a tune from `SONGS/`,
 | `SONGS/` | Hand-checked chord charts. Currently `minor-swing.md` |
 | `IREAL/` | 376 decoded gypsy jazz charts from two iReal Pro playlists, one file per song: `rn-style-gj-charts/` (63) and `gypsy-jazz/` (313). The bar view in each file is a mechanical split, not hand-checked; the raw decoded chart is in every file |
 | `GENERATED/` | Generated arpeggio tab by quality and root. `minor/A` (A minor 6th) and `minor/G` (G minor 6th): one-note-per-string positions and two-notes-per-string shapes, all up to fret 16 |
-| `ETUDES/` | Three arpeggio etudes on Minor Swing, each a full 16-bar chorus in tab |
+| `ETUDES/` | Etudes on Minor Swing and Hungaria (three each), each a full chorus in tab with a degree line |
 | `STUDENT/` | Created by `lesson-planning` on first use, with your permission: your profile and practice log. Not part of the repository's content; keep it private if you share the repo |
 
 ## Getting started
@@ -95,10 +95,10 @@ Open the folder as a project in Bionic (see below), then try a prompt:
     scripts/
       ireal_decode.py # list and decode charts from a saved page, link file or URL
     references/       # the two playlist links (63-song RN style GJ charts, 313-song Gypsy Jazz)
-SONGS/                # hand-checked chord charts (minor-swing.md)
+SONGS/                # chord charts (minor-swing.md hand-checked, hungaria.md read from the raw chart)
 IREAL/                # 376 decoded charts in two packs
 GENERATED/            # generated arpeggio tab (minor/A, minor/G)
-ETUDES/               # three Minor Swing etudes
+ETUDES/               # three etudes each on Minor Swing and Hungaria
 STUDENT/              # created on first use by lesson-planning
 ```
 

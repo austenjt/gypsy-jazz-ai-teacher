@@ -22,6 +22,8 @@ CHORDS = {  # chord tones as pitch classes
     'Am6': 'A C E F#', 'Dm6': 'D F A B', 'Dm7': 'D F A C', 'E7': 'E G# B D',
     'E7b9': 'E G# B D F', 'G13b9': 'G B D F Ab', 'Cmaj7': 'C E G B',
     'Fmaj7': 'F A C E', 'Bb7': 'Bb D F Ab', 'Am7': 'A C E G', 'Am': 'A C E',
+    'G69': 'G B D E A', 'Ab69': 'Ab C Eb F Bb', 'A7': 'A C# E G', 'D7': 'D F# A C',
+    'G/B': 'G B D', 'Bbo7': 'Bb C# E G', 'A-7': 'A C E G', 'C-6': 'C Eb G A',
 }
 SLOT, SLOTS = 3, 8
 
